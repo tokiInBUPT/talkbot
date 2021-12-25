@@ -12,7 +12,12 @@
     },
     "dependencies": {
         "core-js": "^3.6.5",
-        "vue": "^3.0.0"
+        "delay": "^5.0.0",
+        "monaco-editor": "^0.31.1",
+        "vue": "^3.0.0",
+        "vue-beautiful-chat": "https://hub.fastgit.org/mattmezza/vue-beautiful-chat.git",
+        "vue-monaco": "^1.2.2",
+        "vue3-beautiful-chat": "https://hub.fastgit.org/Sitronik/vue3-beautiful-chat.git"
     },
     "devDependencies": {
         "@babel/eslint-parser": "^7.16.5",
@@ -32,6 +37,7 @@
         "eslint-config-alloy": "^4.4.0",
         "eslint-plugin-prettier": "^3.3.1",
         "eslint-plugin-vue": "^7.0.0",
+        "monaco-editor-webpack-plugin": "^7.0.1",
         "peggy": "^1.2.0",
         "prettier": "^2.2.1",
         "sass": "^1.26.5",
