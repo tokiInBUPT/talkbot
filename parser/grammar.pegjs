@@ -17,12 +17,12 @@ WS "whitespace"
 LB "Linebreak"
     = [\r\n]
     
-CMD0 = keyword:("pass"){
+CMD0 = keyword:("pass" / "exit"){
     return {
         "keyword": keyword,
     }
 }
-KW1 = "goto" / "output"
+KW1 = "goto" / "output" / "save" / "eval"
 KWBLK = "silence" / "default"
 KW1BLK = "for" / "input"
     
@@ -48,4 +48,4 @@ CMD1BLK
         "children":children
     }
 }
-VALUE = $([\u4e00-\u9fa5_a-zA-Z0-9\\//$.\[\](){}\*?，。！"]i*)
+VALUE = $([^ \n\t\r]*)

@@ -5,15 +5,24 @@
         </div>
         <div class="right">
             <chat-box />
+            <var-manager />
         </div>
+        <submit-bar />
     </main>
 </template>
 
 <script>
 import ChatBox from './components/ChatBox.vue'
 import Editor from './components/Editor.vue'
+import SubmitBar from './components/SubmitBar.vue'
+import VarManager from './components/VarManager.vue'
 export default {
-    components: { Editor, ChatBox },
+    components: {
+        Editor,
+        ChatBox,
+        SubmitBar,
+        VarManager,
+    },
     setup() {
         return {}
     },
@@ -40,7 +49,6 @@ main {
     left: 0;
     right: 500px;
     bottom: 0;
-    background: #eee;
 }
 .right {
     width: 500px;

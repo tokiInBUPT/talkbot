@@ -5,7 +5,7 @@
             :message-list="chatData"
             :on-user-input-submit="onSubmit"
             :participants="participants"
-            title="一个聊天窗口"
+            title="聊天窗口"
             :is-open="true"
             :show-emoji="false"
             :show-emoji-in-text="false"
@@ -69,7 +69,7 @@
 </template>
 
 <script lang="ts">
-import { chatData } from '@/bus'
+import { chatData, globalEV } from '@/bus'
 import { TextMessage } from '@/lib/chatbox/typing'
 import ChatWindow from 'vue3-beautiful-chat/src/ChatWindow.vue'
 export default {
@@ -77,6 +77,7 @@ export default {
     setup() {
         async function onSubmit(message: TextMessage) {
             chatData.value.push(message)
+            globalEV.emit('input', message.data.text)
         }
         return {
             chatData,
@@ -98,19 +99,41 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-.chat-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    .chat-window {
-        box-shadow: 0px 0 20px 0px rgb(148 149 150 / 70%);
-        position: static;
-        height: 600px;
+.chat-window {
+    box-shadow: none;
+    position: absolute;
+    top: 0;
+    width: 500px;
+    right: 0;
+    bottom: 280px;
+    height: auto;
+    border-radius: 0;
+    &::v-deep(.sc-user-input) {
         border-radius: 0;
-        &::v-deep(.sc-header, .sc-user-input) {
-            border-radius: 0;
+    }
+    &::v-deep(.sc-header) {
+        border-radius: 0;
+        box-shadow: none !important;
+        padding-left: 15px;
+        min-height: 0;
+        height: 40px;
+        .sc-header--title {
+            cursor: default;
+            box-shadow: none !important;
+            padding: 0;
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
         }
+    }
+
+    &::v-deep(.sc-message) {
+        width: 100%;
+        padding: 0 15px;
+        box-sizing: border-box;
+    }
+    &::v-deep(*) {
+        word-break: break-word;
     }
 }
 </style>

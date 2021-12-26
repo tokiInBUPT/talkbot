@@ -2,9 +2,11 @@
     <monaco-editor
         :value="code"
         class="editor"
-        language=""
-        fontFamily="'Sarasa Term SC',Consolas,微软雅黑"
-        @input="code = $event"
+        language="javascript"
+        :options="{
+            fontFamily: `'Sarasa Term SC',Consolas,微软雅黑`,
+        }"
+        @change="code = $event"
     />
 </template>
 
@@ -27,16 +29,15 @@ export default {
 </script>
 <style lang="scss" scoped>
 .editor {
+    border-right: 1px solid #4e8cff;
+    box-sizing: border-box;
     width: 100%;
-    height: 100vh;
+    height: calc(100% - 60px);
     overflow: hidden;
     font-family: 'Sarasa Term SC', Consolas, 微软雅黑;
     &::v-deep(.monaco-editor) {
         .editor-widget.suggest-widget {
             display: none;
-        }
-        .view-lines {
-            font-family: 'Sarasa Term SC', Consolas, 微软雅黑 !important;
         }
     }
 }
