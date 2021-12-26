@@ -23,7 +23,7 @@ CMD0 = keyword:("pass" / "exit"){
     }
 }
 KW1 = "goto" / "output" / "save" / "eval"
-KWBLK = "silence" / "default"
+KWBLK = "default"
 KW1BLK = "for" / "input"
     
 CMD1 

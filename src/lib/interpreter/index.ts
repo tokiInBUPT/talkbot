@@ -64,6 +64,7 @@ export async function runCommand(command: ICommand, io: IInterface, _runtime: IR
                         ${value}
                     }`,
                 )
+                console.log('RUNNER', 'EVAL', fun)
                 try {
                     fun(runtime.storage)
                 } catch (e) {
