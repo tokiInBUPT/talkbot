@@ -898,7 +898,7 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
-"@babel/runtime@^7.11.0", "@babel/runtime@^7.13.10", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.11.0", "@babel/runtime@^7.8.4":
   version "7.16.5"
   resolved "https://registry.npmmirror.com/@babel/runtime/download/@babel/runtime-7.16.5.tgz#7f3e34bf8bdbbadf03fbb7b1ea0d929569c9487a"
   integrity sha512-TXWihFIS3Pyv5hzR7j6ihmeLkZfrXGxAr5UfSl8CHf+6q/wpiYDkUau0czckpYG8QmnCIuPpdLtuA9VmuGGyMA==
@@ -3962,7 +3962,7 @@ debug@^3.1.1, debug@^3.2.6:
   dependencies:
     ms "^2.1.1"
 
-debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.3.2:
+debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.2.0, debug@^4.3.2:
   version "4.3.3"
   resolved "https://registry.npmmirror.com/debug/download/debug-4.3.3.tgz#04266e0b70a98d4462e6e288e38259213332b664"
   integrity sha512-/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q==
@@ -8323,11 +8323,6 @@ pnp-webpack-plugin@^1.6.4:
   dependencies:
     ts-pnp "^1.1.6"
 
-popper.js@^1.16.1:
-  version "1.16.1"
-  resolved "http://mirrors.cloud.tencent.com/npm/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
-  integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
-
 portfinder@^1.0.26:
   version "1.0.28"
   resolved "https://registry.npmmirror.com/portfinder/download/portfinder-1.0.28.tgz#67c4622852bd5374dd1dd900f779f53462fac778"
@@ -9391,6 +9386,13 @@ schema-utils@^2.0.0, schema-utils@^2.5.0, schema-utils@^2.6.1, schema-utils@^2.6
     "@types/json-schema" "^7.0.5"
     ajv "^6.12.4"
     ajv-keywords "^3.5.2"
+
+script-ext-html-webpack-plugin@^2.1.5:
+  version "2.1.5"
+  resolved "https://mirrors.cloud.tencent.com/npm/script-ext-html-webpack-plugin/-/script-ext-html-webpack-plugin-2.1.5.tgz#d4a57e43b04aaf531f675c935688c3971bfafc6c"
+  integrity sha512-nMjd5dtsnoB8dS+pVM9ZL4mC9O1uVtTxrDS99OGZsZxFbkZE6pw0HCMued/cncDrKivIShO9vwoyOTvsGqQHEQ==
+  dependencies:
+    debug "^4.2.0"
 
 select-hose@^2.0.0:
   version "2.0.0"
@@ -10682,16 +10684,6 @@ uuid@^8.3.2:
   resolved "https://registry.npmmirror.com/uuid/download/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
 
-v-tooltip@^2.0.1:
-  version "2.1.3"
-  resolved "https://mirrors.cloud.tencent.com/npm/v-tooltip/-/v-tooltip-2.1.3.tgz#281c2015d1e73787f13c8956aa295b8c3a73f261"
-  integrity sha512-xXngyxLQTOx/yUEy50thb8te7Qo4XU6h4LZB6cvEfVd9mnysUxLEoYwGWDdqR+l69liKsy3IPkdYff3J1gAJ5w==
-  dependencies:
-    "@babel/runtime" "^7.13.10"
-    lodash "^4.17.21"
-    popper.js "^1.16.1"
-    vue-resize "^1.0.1"
-
 v-tooltip@^4.0.0-alpha.1:
   version "4.0.0-beta.2"
   resolved "https://mirrors.cloud.tencent.com/npm/v-tooltip/-/v-tooltip-4.0.0-beta.2.tgz#c5cb8d4b703207f588965e32bbec54ada0e43643"
@@ -10736,19 +10728,6 @@ vm-browserify@^1.0.1:
   version "1.1.2"
   resolved "https://registry.npmmirror.com/vm-browserify/download/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha1-eGQcSIuObKkadfUR56OzKobl3aA=
-
-"vue-beautiful-chat@https://hub.fastgit.org/mattmezza/vue-beautiful-chat.git":
-  version "2.5.0"
-  resolved "https://hub.fastgit.org/mattmezza/vue-beautiful-chat.git#79b3d909410c977121839f1d7a3932a90f4c42d1"
-  dependencies:
-    autolinker "^1.8.3"
-    emoji-js "^3.4.0"
-    escape-goat "^1.3.0"
-    imagemin "^6.1.0"
-    kind-of "6.0.3"
-    minimist "1.2.3"
-    msgdown "^1.0.2"
-    v-tooltip "^2.0.1"
 
 vue-eslint-parser@^7.0.0, vue-eslint-parser@^7.10.0:
   version "7.11.0"
@@ -10824,13 +10803,6 @@ vue-monaco@^1.2.2:
   dependencies:
     monaco-editor "^0.20.0"
     nano-assign "^1.0.0"
-
-vue-resize@^1.0.1:
-  version "1.0.1"
-  resolved "https://mirrors.cloud.tencent.com/npm/vue-resize/-/vue-resize-1.0.1.tgz#c120bed4e09938771d622614f57dbcf58a5147ee"
-  integrity sha512-z5M7lJs0QluJnaoMFTIeGx6dIkYxOwHThlZDeQnWZBizKblb99GSejPnK37ZbNE/rVwDcYcHY+Io+AxdpY952w==
-  dependencies:
-    "@babel/runtime" "^7.13.10"
 
 vue-resize@^2.0.0-alpha.1:
   version "2.0.0-alpha.1"

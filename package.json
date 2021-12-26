@@ -15,7 +15,6 @@
         "delay": "^5.0.0",
         "monaco-editor": "^0.31.1",
         "vue": "^3.0.0",
-        "vue-beautiful-chat": "https://hub.fastgit.org/mattmezza/vue-beautiful-chat.git",
         "vue-monaco": "^1.2.2",
         "vue3-beautiful-chat": "https://hub.fastgit.org/Sitronik/vue3-beautiful-chat.git"
     },
@@ -42,6 +41,7 @@
         "prettier": "^2.2.1",
         "sass": "^1.26.5",
         "sass-loader": "^8.0.2",
+        "script-ext-html-webpack-plugin": "^2.1.5",
         "ts-node": "^10.4.0",
         "ts-pegjs": "^1.2.1",
         "typescript": "^4.5.4",
