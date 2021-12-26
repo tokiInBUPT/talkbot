@@ -1,26 +1,29 @@
 # talkbot
 
 ## 程序设计实践大作业
+
+### 安装依赖项
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 启动开发环境
 ```
 yarn serve
 ```
 
-### Compiles and minifies for production
+### 打包编译
 ```
 yarn build
 ```
+本工程已配置为单文件编译，打包后的产物中`index.html`可直接独立运行。
 
-### Run your unit tests
+### 运行测试集
 ```
-yarn test:unit
+yarn test
 ```
 
-### Lints and fixes files
+### 运行语法检查和修复
 ```
 yarn lint
 ```
@@ -31,28 +34,70 @@ yarn lint
  1. 设计语法模式，使用库实现DSL解析器
  2. 设计对解析后语法树的执行器
  3. 设计交互界面
- 4. 如果能力能实现，自行实现DSL解析器，将原有解析模块更改为测试桩
- 5. 对交互界面也尽可能的实现测试
 
 ## 语法格式
+
+### 测试脚本
+```javascript
 main {
-    output "您好，您可以对我描述您的问题"
+    output "您好，您可以对我描述您的问题。"
     goto menu
 }
 menu {
-    input
+    input 10000 goto silence
+    goto processInput
+}
+processInput {
+    for /您好|你好/ goto hello
+    for /余额/ goto balance
+    for /充值/ goto pay
     for /成绩/ goto grade
     for /学费/ goto billing
     for /退学/ goto unroll
-    for /人工/ goto unroll
-    silence goto silence
+    for /人工/ goto service
     default goto default
 }
-silence {
-    output "我好像没听清楚，您可以尝试再说一次"
+hello {
+    output "您好，很高兴见到你。"
     goto menu
+}
+balance {
+    output "您的校园卡余额是：${balance}，请问还有什么可以帮到您？"
+    goto menu
+}
+pay {
+    output "请输入您的充值金额"
+    input 0 goto pay
+    save charge
+    eval balance=Number(balance)+Number(charge)
+    output "您已充值%20${charge}%20元，当前余额为%20${balance}%20元，请问还有什么可以帮到您？"
+    goto menu
+}
+grade {
+    output "您的成绩是：${grade}，请问还有什么可以帮到您？"
+    goto menu
+}
+billing {
+    output "您本学期的当前学费${billed>0?'已':'未'}缴交，请问还有什么可以帮到您？"
+    goto menu
+}
+unroll {
+    output "已为您申请一键退学，再见。"
+    exit
+}
+service {
+    output "人工服务当前不在线，您可以在此处留言。"
+    input 10000 goto silence
+    output "您的留言已收到，感谢您的支持。请问还有什么可以帮到您？"
+    goto menu
+}
+silence {
+    output "您已经一段时间没有说话了，您可以随时继续向我提问。"
+    input 0 goto silence
+    goto processInput
 }
 default {
-    output "这个知识点我还没有明白，您可以问问其他的，或者转人工服务"
+    output "这个知识点我还没有明白，您可以问问其他的，或者转人工服务。"
     goto menu
 }
+```
