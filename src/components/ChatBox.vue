@@ -129,7 +129,8 @@ export default {
 
     &::v-deep(.sc-message) {
         width: 100%;
-        padding: 0 15px;
+        padding-right: 15px;
+        padding-left: 15px;
         box-sizing: border-box;
     }
     &::v-deep(*) {

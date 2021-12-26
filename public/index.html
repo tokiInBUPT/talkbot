@@ -5,16 +5,29 @@
         <title><%= htmlWebpackPlugin.options.title %></title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-        <link rel="icon" href="<%= BASE_URL %>favicon.png">
+        <link rel="icon" href="<%= BASE_URL %>favicon.png" />
         <style>
-            .noscript:before {
-                content: '噢我的老天爷，看起来你没有启用神奇的JavaScript！它实在是太不可思议了，以至于我们的应用没有它完全没办法工作。老伙计，我以上帝的名义发誓，如果你现在启用它，我们的应用会像石头堆里的黄金一样显眼！';
-            }
+            .noscript:before {content: '噢我的老天爷，看起来你没有启用神奇的JavaScript！它实在是太不可思议了，以至于我们的应用没有它完全没办法工作。老伙计，我以上帝的名义发誓，如果你现在启用它，我们的应用会像石头堆里的黄金一样显眼！';}
+            .cssload-loader {width: 24px;height: 24px;position: absolute;left: 50%;transform: translate3d(-50%, -50%, 0);perspective: 1200;}
+            .cssload-flipper {position: relative;display: block;height: inherit;width: inherit;animation: cssload-flip 1.38s infinite ease-in-out;transform-style: preserve-3d;}
+            .cssload-front,.cssload-back {position: absolute;top: 0;left: 0;display: block;background-color: rgb(88, 150, 250);height: 100%;width: 100%;backface-visibility: hidden;}
+            .cssload-back {background-color: rgb(199, 224, 255);z-index: 800;transform: rotateY(-180deg);}
+            @keyframes cssload-flip {0% {transform: perspective(117px) rotateX(0deg) rotateY(0deg);} 50% { transform: perspective(117px) rotateX(-180.1deg) rotateY(0deg); } 100% {transform: perspective(117px) rotateX(-180deg) rotateY(-179.9deg);}}
+            #vueload {position: absolute;top: 0;left: 0;right: 0;bottom: 0;padding-top: calc(50vh - 30px);}
+            .load #vueload,#toki { opacity: 0;pointer-events: none;}
+            .load #toki {opacity: 1;pointer-events: all;}
         </style>
     </head>
     <body>
         <noscript><strong class="noscript"></strong></noscript>
-        <div id="vueload"></div>
-        <main id="app"></main>
+        <div id="vueload">
+            <div class="cssload-loader">
+                <div class="cssload-flipper">
+                    <div class="cssload-front"></div>
+                    <div class="cssload-back"></div>
+                </div>
+            </div>
+        </div>
+        <main id="toki"></main>
     </body>
 </html>
