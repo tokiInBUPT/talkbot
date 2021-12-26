@@ -6,7 +6,7 @@
         :options="{
             fontFamily: `'Sarasa Term SC',Consolas,微软雅黑`,
         }"
-        @change="code = $event"
+        @change="editorChange"
     />
 </template>
 
@@ -23,6 +23,11 @@ export default {
     setup() {
         return {
             code,
+            editorChange(ev) {
+                if (typeof ev === 'string') {
+                    code.value = ev
+                }
+            },
         }
     },
 }
