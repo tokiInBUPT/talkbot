@@ -1,6 +1,11 @@
 import { ICommand } from '@/lib/parser'
 import { runCommand } from '@/lib/interpreter/index'
 import { IRuntime } from '@/lib/interpreter/typing'
+beforeEach(() => {
+    jest.spyOn(console, 'log').mockImplementation(() => {
+        // ignore console output
+    })
+})
 describe('interceptor', () => {
     it('intercepts normal input', async () => {
         expect.assertions(1)
