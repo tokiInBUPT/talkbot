@@ -107,6 +107,7 @@ export default {
     right: 0;
     bottom: 280px;
     height: auto;
+    max-height: none;
     border-radius: 0;
     &::v-deep(.sc-user-input) {
         border-radius: 0;
