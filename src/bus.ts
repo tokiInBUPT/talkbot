@@ -22,11 +22,12 @@ globalEV.on('compile', async () => {
     try {
         globalRunner.compile(code.value)
         globalStatus.value = ESTATUS.SUCCESS
+        globalRunner.variables = varList.value
+        globalRunner.run()
     } catch (e) {
         globalStatus.value = ESTATUS.FAIL
+        throw e
     }
-    globalRunner.variables = varList.value
-    globalRunner.run()
 })
 
 globalEV.on('stop', async () => {
