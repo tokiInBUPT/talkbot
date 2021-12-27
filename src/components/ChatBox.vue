@@ -85,12 +85,12 @@ export default {
             participants: [
                 {
                     id: 'bot',
-                    name: '萝卜',
-                    imageUrl: '',
+                    name: ' ',
+                    imageUrl: `data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii00NzQ5LjQ4IC01MDIwIDM1LjAzNiAzNS4wMzYiPjxkZWZzPjxjbGlwUGF0aCBpZD0iYSI+PHBhdGggZD0iTTAtMzk5LjQ3OWgxNy41NTV2MTcuNTU1SDB6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIDM5OS40NzkpIiBmaWxsPSJub25lIi8+PC9jbGlwUGF0aD48L2RlZnM+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQ4ODYgLTUwNzUpIj48Y2lyY2xlIGN4PSIxNy41MTgiIGN5PSIxNy41MTgiIHI9IjE3LjUxOCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTM2LjUyIDU1KSIgZmlsbD0iIzRlOGNmZiIvPjxnIGNsaXAtcGF0aD0idXJsKCNhKSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQ1LjEzIDY0KSI+PHBhdGggZD0iTTE3LjU1NSA4Ljc3OEE4Ljc3OCA4Ljc3OCAwIDAgMCA4Ljc3NyAwIDguNzc4IDguNzc4IDAgMCAwLS4wMDEgOC43NzhhOC43NDUgOC43NDUgMCAwIDAgMi4yNiA1Ljg3OXYxLjQ0MmMwIC44LjQ5MiAxLjQ1NyAxLjEgMS40NTdoNS44M2EuODQzLjg0MyAwIDAgMCAuMTgzLS4wMiA4Ljc3OCA4Ljc3OCAwIDAgMCA4LjE4NC04Ljc1NyIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik0zLjE2MSA4LjkyMUE5LjI5MiA5LjI5MiAwIDAgMSA5LjU0MS4wMzMgOC43NjMgOC43NjMgMCAwIDAgOC43NzggMCA4Ljc3NCA4Ljc3NCAwIDAgMCAwIDguNzc4IDkuNTA4IDkuNTA4IDAgMCAwIDIuMjI0IDE0LjdjLjAwNSAwIDAgLjAwOSAwIC4wMS0uMzExLjM1Mi0xLjkyNCAyLjg0OS4wMjEgMi44NDloMi4yNWMtMS4yMy0uMDIyIDEuMjYzLTIuMTA3LjI2OS0zLjQ5NGE4LjIyNSA4LjIyNSAwIDAgMS0xLjYtNS4xNDEiIGZpbGw9IiNlZmY0ZjkiLz48L2c+PC9nPjwvc3ZnPg==`,
                 },
                 {
                     id: 'user',
-                    name: '用户',
+                    name: ' ',
                     imageUrl: '',
                 },
             ],
