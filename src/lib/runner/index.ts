@@ -94,8 +94,14 @@ export class Runner extends EventEmitter {
     }
 
     async run() {
-        while (!this.stopped && this.runtime.index >= 0) {
-            await this.runOnce()
+        try {
+            while (!this.stopped && this.runtime.index >= 0) {
+                await this.runOnce()
+            }
+        } catch (e) {
+            this.stopped = true
+            this.emit('stop')
+            throw e
         }
         this.stopped = true
         this.emit('stop')
