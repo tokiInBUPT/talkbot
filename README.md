@@ -1,6 +1,9 @@
-# talkbot
+# <center>talkbot</center>
+<center>程序设计实践大作业：基于DSL解析器实现的可编程聊天机器人</center>
+<br>
 
-## 程序设计实践大作业：基于DSL解析器实现的可编程聊天机器人
+![](screenshot.png)
+
 
 ### 安装依赖项
 ```
